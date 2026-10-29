@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Configuración de página ancha
-st.set_page_config(page_title="Control de Nómina Semanal", layout="wide", page_icon="💼")
+st.set_page_config(page_title="Control de Nómina", layout="wide", page_icon="📊")
 
 # Estilos visuales personalizados
 st.markdown("""
@@ -13,7 +13,7 @@ st.markdown("""
         .stRadio > label {
             font-size: 18px !important;
             font-weight: bold !important;
-            color: #1E3A8A;
+            color: #d51218;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -24,8 +24,8 @@ st.markdown("""
 col_titulo, col_carga = st.columns([2, 1])
 
 with col_titulo:
-    st.title("💼 Consultor de Nómina Semanal")
-    st.caption("🌱 Cosecha y Planta Empacadora | Desde el 21 de Septiembre")
+    st.title("💼 Consultor de Nómina")
+    st.caption("🍇 Campaña 2026 | Desde el 21 de Septiembre")
 
 with col_carga:
     st.markdown("### 📥 Cargar Planilla")
@@ -106,4 +106,4 @@ with col_contenido:
         except Exception as e:
             st.error(f"❌ Error al procesar el archivo Excel: {e}")
     else:
-        st.info("👈 Por favor, sube un archivo Excel de planilla en la esquina superior derecha para comenzar.")
+        st.info("☝ Por favor, sube la planilla semanal en la esquina superior derecha para comenzar.")
